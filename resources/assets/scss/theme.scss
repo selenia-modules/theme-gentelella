@@ -1,3 +1,50 @@
+.action-bar {
+  .btn {
+    float: right;
+    min-width: 80px;
+  }
+}
+
+.btn-group>.btn {
+  float: right;
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.x_panel {
+  max-width: 1024px;;
+}
+
+.x_panel.FormPanel {
+  padding: 30px 17px 10px;
+}
+
+.x_footer {
+  padding-top: 15px;
+}
+
+.breadcrumb {
+  padding-left: 0px;
+  background-color: transparent;
+}
+
+// "Enhance" form inputs styling
+
+.form-control {
+  border-color: hsla(0,0%,91%,1);
+  box-shadow: none;
+  background: hsla(0,0%,98%,1);
+}
+
+.form-horizontal .control-label {
+  text-align: left;
+  font-weight: 500;
+}
+
+//-------------------------------------------------------
+
 .left_col {
   background: #2A3F54;
 }
