@@ -1,3 +1,37 @@
+//####################################################
+// CUSTOMIZATION
+//####################################################
+
+.container {
+  background: hsl(210,15%,85%);
+}
+
+.main_container {
+  max-width: 1280px;
+  background: #2A3F54;
+  position: relative;
+  z-index: 1;
+  // The dropshadow on a floating div is more performant and draws a shadow only on the right side of the container.
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1279px;
+    width: 1px;
+    box-shadow: 0 0 7px rgba(0,0,0,.5);
+    z-index: -1;
+  }
+  li.top_nav {
+    margin-left: 0;
+  }
+}
+
+a.site_title {
+  text-align: center;
+  padding: 0;
+}
+
 .action-bar {
   .btn {
     float: right;
@@ -63,7 +97,9 @@ button.btn { margin: 0 }
   font-weight: 500;
 }
 
-//-------------------------------------------------------
+//####################################################
+// GENTELELLA
+//####################################################
 
 .left_col {
   background: #2A3F54;
