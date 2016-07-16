@@ -88,7 +88,8 @@ button.btn { margin: 0 }
 
 .form-control,
 .chosen-container:not(.chosen-container-active) ul.chosen-choices,
-.chosen-container:not(.chosen-container-active) a.chosen-single {
+.chosen-container:not(.chosen-container-active) a.chosen-single,
+div div.tagsinput {
   border-color: hsla(0,0%,91%,1);
   box-shadow: none;
   background: hsla(0,0%,98%,1);
