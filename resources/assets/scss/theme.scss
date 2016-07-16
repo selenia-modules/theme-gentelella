@@ -86,10 +86,17 @@ button.btn { margin: 0 }
 
 // "Enhance" form inputs styling
 
-.form-control, .chosen-container ul.chosen-choices {
+.form-control,
+.chosen-container:not(.chosen-container-active) ul.chosen-choices,
+.chosen-container:not(.chosen-container-active) a.chosen-single {
   border-color: hsla(0,0%,91%,1);
   box-shadow: none;
   background: hsla(0,0%,98%,1);
+}
+.chosen-container-active ul.chosen-choices,
+.chosen-container-active a.chosen-single {
+  box-shadow: none;
+  border-color: #CCD0D7;
 }
 
 .form-horizontal .control-label {
