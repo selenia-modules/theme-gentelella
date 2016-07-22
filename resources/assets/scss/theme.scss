@@ -4,17 +4,52 @@
 // GENTELELLA CUSTOMIZATION
 //####################################################
 
+$overflow-color: hsl(210,15%,85%);
+$sidebar-color: #2A3F54;
+$page-color: #F3F4F5;
+
 //===================================
 //  LAYOUT
 //===================================
 
-.container {
-  background: hsl(210,15%,85%);
+html, body, body>form, .body, .main_container {
+  height: 100%;
+}
+
+body {
+  background: $overflow-color;
+
+}
+
+.left_col {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.right_col {
+  min-height: calc(100% - 49px);
+}
+
+.clearfix:after, form:after {
+  content: "";
+}
+
+.body {
+}
+
+.toggle {
+  padding-top: 10px;
+  width: 50px;
+  a {
+    padding: 0;
+  }
 }
 
 .main_container {
   max-width: 1280px;
-  background: #2A3F54;
+  //background: $overflow-color;
   position: relative;
   z-index: 1;
   // The dropshadow on a floating div is more performant and draws a shadow only on the right side of the container.
@@ -36,7 +71,7 @@
 // RIGHT PANE
 .nav-md .container.body .right_col {
   padding: 10px 25px;
-  background: #F3F4F5;
+  background: $page-color;
 }
 
 //===================================
@@ -48,7 +83,7 @@ ul.nav.side-menu>li.active>a {
 }
 
 //===================================
-//  HEADERS
+//  HEADERS AND FOOTERS
 //===================================
 
 a.site_title {
@@ -68,6 +103,9 @@ a.site_title {
   background-color: transparent;
 }
 
+.main_container > footer {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
 
 //===================================
 //  PANELS
@@ -153,6 +191,9 @@ a.site_title {
   .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
     background: rgba(87, 117, 142, 0.4) !important
   }
+  .no-data {
+    padding: 15px 30px 10px;
+  }
 }
 
 //===================================
@@ -224,6 +265,10 @@ button.btn { margin: 0 }
   font-weight: 500;
 }
 
+label {
+  font-weight: 400; // Affects radio buttons and checkboxes, NOT the field labels
+}
+
 // CHOSEN
 .form-control,
 .chosen-container:not(.chosen-container-active) ul.chosen-choices,
@@ -239,3 +284,11 @@ div div.tagsinput {
   border-color: #CCD0D7;
 }
 
+//===================================
+// MISC
+//===================================
+
+.user-profile img {
+  width: 32px;
+  height: 32px;
+}

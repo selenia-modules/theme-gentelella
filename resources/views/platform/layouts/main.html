@@ -5,7 +5,7 @@
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
+          <div class="">
             <div class="navbar nav_title" style="border: 0;">
               <a href="{app.homeURI}" class="site_title"><span>{app.appName}</span></a>
             </div>
@@ -38,9 +38,12 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
+
             <div class="page-title">
               <div class="title_left1 col-sm-8 col-xs-12">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
                 <h3>{navigation.currentLink.title}</h3>
                 <NavigationPath navigation={navigation}>
                   <Prepend>
@@ -59,7 +62,7 @@
                                   class="user-profile top_nav"
                                   iconClass="pull-right">
                       <Image>
-                        <img src="http://webapplayers.com/inspinia_admin-v2.5/img/a4.jpg" alt="">
+                        <img src="modules/selenia/platform/i/generic-user.png">
                       </Image>
                     </LinkDropdown>
                   </ul>
@@ -75,7 +78,6 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- /page content -->
 
         <!-- footer content -->
