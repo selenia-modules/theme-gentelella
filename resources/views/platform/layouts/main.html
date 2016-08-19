@@ -1,98 +1,97 @@
 <Import services="app navigation session"/>
 
-<Content of="master">
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="{app.homeURI}" class="site_title"><span>{app.appName}</span></a>
+<Content of=bodyAttrs value='class="nav-md"'/>
+
+<Content of=body preRender>
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="{app.homeURI}" class="site_title"><span>{app.appName}</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <br>
+
+          <!-- sidebar menu -->
+          <div>
+            <SideBarMenu id="sidebar-menu"
+                         class="main_menu_side hidden-print main_menu"
+                         expandIcon="fa.fa-chevron-down"
+                         listClass="nav.side-menu"
+                         sectionClass="menu_section"
+                         menu={navigation.app_home}
+                         excludeRoot>
+              <SectionTemplate>
+                <div class="menu_section">
+                  <h3>{header}</h3>
+                  {menu|*}
+                </div>
+              </SectionTemplate>
+            </SideBarMenu>
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+
+          <div class="page-title">
+            <div class="title_left1 col-sm-8 col-xs-12">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <h3>{navigation.currentLink.title}</h3>
+              <NavigationPath navigation={navigation}>
+                <Prepend>
+                  <i class="ion-home"></i>&nbsp;
+                </Prepend>
+              </NavigationPath>
             </div>
 
-            <div class="clearfix"></div>
+            <div class="title_right1 col-sm-4 col-sm-12">
+              <div class="form-group pull-right">
+                {#topTools|*}
 
-            <br>
-
-            <!-- sidebar menu -->
-            <div>
-              <SideBarMenu id="sidebar-menu"
-                           class="main_menu_side hidden-print main_menu"
-                           expandIcon="fa.fa-chevron-down"
-                           listClass="nav.side-menu"
-                           sectionClass="menu_section"
-                           menu={navigation.app_home}
-                           excludeRoot>
-                <SectionTemplate>
-                  <div class="menu_section">
-                    <h3>{header}</h3>
-                    {menu|*}
-                  </div>
-                </SectionTemplate>
-              </SideBarMenu>
+                <ul class="nav navbar-nav navbar-right">
+                  <LinkDropdown link={navigation.userMenu}
+                                title={session.user.realName}
+                                class="user-profile top_nav"
+                                iconClass="pull-right">
+                    <Image>
+                      <img src="modules/selenia/platform/i/generic-user.png">
+                    </Image>
+                  </LinkDropdown>
+                </ul>
+              </div>
             </div>
-            <!-- /sidebar menu -->
+          </div>
 
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              {#statusMessage|*}
+              {#main|*}
+            </div>
           </div>
         </div>
+      <!-- /page content -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-
-            <div class="page-title">
-              <div class="title_left1 col-sm-8 col-xs-12">
-                <div class="nav toggle">
-                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                </div>
-                <h3>{navigation.currentLink.title}</h3>
-                <NavigationPath navigation={navigation}>
-                  <Prepend>
-                    <i class="ion-home"></i>&nbsp;
-                  </Prepend>
-                </NavigationPath>
-              </div>
-
-              <div class="title_right1 col-sm-4 col-sm-12">
-                <div class="form-group pull-right">
-                  {#topTools|*}
-
-                  <ul class="nav navbar-nav navbar-right">
-                    <LinkDropdown link={navigation.userMenu}
-                                  title={session.user.realName}
-                                  class="user-profile top_nav"
-                                  iconClass="pull-right">
-                      <Image>
-                        <img src="modules/selenia/platform/i/generic-user.png">
-                      </Image>
-                    </LinkDropdown>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                {#statusMessage|*} {#main|*}
-              </div>
-            </div>
-          </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            {adminSettings.footer|*}
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          {adminSettings.footer|*}
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
     </div>
-
-    <Include scripts/>
-  </body>
+  </div>
 </Content>
 
 <Include view="platform/layouts/master.html"/>

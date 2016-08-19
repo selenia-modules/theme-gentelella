@@ -1,5 +1,14 @@
 <Import service="app"/>
 
+<Content prependTo=head>
+  <meta charset="UTF-8">
+  <title>{pageTitle}</title>
+  <base href="{app.baseURI}/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="{app.favicon}">
+</Content>
+
 <AssetsGroup prepend>
   <Style src="lib/bootstrap/dist/css/bootstrap.min.css"/>
   <Style src="lib/font-awesome/css/font-awesome.min.css"/>
@@ -16,14 +25,12 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>{pageTitle}</title>
-    <base href="{app.baseURI}/">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href={app.favicon}>
+    {#head|*}
     <Include styles/>
   </head>
-
-  {#master|*}
+  <body {#bodyAttrs|*}>
+    {#body|*}
+    <Include scripts/>
+    {#extraContent|*}
+  </body>
 </html>
