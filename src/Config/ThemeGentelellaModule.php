@@ -10,7 +10,6 @@ class ThemeGentelellaModule implements ModuleInterface
   function configure (ModuleServices $module)
   {
     $module
-      ->publishPublicDirAs ('modules/selenia-modules/theme-gentelella')
       ->provideViews ()
       ->provideMacros ()
       ->registerComponents ([
