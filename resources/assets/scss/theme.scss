@@ -82,6 +82,18 @@ ul.nav.side-menu>li.active>a {
   box-shadow: none;
 }
 
+.nav.side-menu>li>a, .nav.child_menu>li>a {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.menu_section {
+  margin-bottom: 7px;
+  h3 {
+    padding-left: 15px;
+  }
+}
+
 //===================================
 //  HEADERS AND FOOTERS
 //===================================
