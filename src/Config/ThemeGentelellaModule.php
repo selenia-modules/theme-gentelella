@@ -1,13 +1,13 @@
 <?php
 namespace Selenia\Themes\Gentelella\Config;
 
-use Electro\Core\Assembly\ModuleInfo;
-use Electro\Core\Assembly\Services\Bootstrapper;
 use Electro\Interfaces\ModuleInterface;
+use Electro\Kernel\Lib\ModuleInfo;
+use Electro\Kernel\Services\Bootstrapper;
 use Electro\Plugins\Matisse\Config\MatisseSettings;
 use Electro\ViewEngine\Config\ViewEngineSettings;
 use Selenia\Themes\Gentelella\Components\SideBarMenu;
-use const Electro\Core\Assembly\Services\CONFIGURE;
+use const Electro\Kernel\Services\CONFIGURE;
 
 class ThemeGentelellaModule implements ModuleInterface
 {
