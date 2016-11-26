@@ -2,10 +2,10 @@
 namespace Selenia\Themes\Gentelella\Components;
 
 use Electro\Interfaces\Navigation\NavigationLinkInterface;
-use Electro\Plugins\Matisse\Components\Base\HtmlComponent;
-use Electro\Plugins\Matisse\Components\Internal\Metadata;
-use Electro\Plugins\Matisse\Properties\Base\HtmlComponentProperties;
-use Electro\Plugins\Matisse\Properties\TypeSystem\type;
+use Matisse\Components\Base\HtmlComponent;
+use Matisse\Components\Internal\Metadata;
+use Matisse\Properties\Base\HtmlComponentProperties;
+use Matisse\Properties\TypeSystem\type;
 use PhpKit\Flow\Flow;
 
 class SideBarMenuProperties extends HtmlComponentProperties

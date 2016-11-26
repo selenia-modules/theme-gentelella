@@ -4,7 +4,7 @@ namespace Selenia\Themes\Gentelella\Config;
 use Electro\Interfaces\KernelInterface;
 use Electro\Interfaces\ModuleInterface;
 use Electro\Kernel\Lib\ModuleInfo;
-use Electro\Plugins\Matisse\Config\MatisseSettings;
+use Matisse\Config\MatisseSettings;
 use Electro\Profiles\WebProfile;
 use Electro\ViewEngine\Config\ViewEngineSettings;
 use Selenia\Themes\Gentelella\Components\SideBarMenu;
