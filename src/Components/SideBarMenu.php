@@ -3,7 +3,7 @@ namespace Selenia\Themes\Gentelella\Components;
 
 use Electro\Interfaces\Navigation\NavigationLinkInterface;
 use Matisse\Components\Base\HtmlComponent;
-use Matisse\Components\Internal\Metadata;
+use Matisse\Components\Metadata;
 use Matisse\Properties\Base\HtmlComponentProperties;
 use Matisse\Properties\TypeSystem\type;
 use PhpKit\Flow\Flow;
@@ -39,7 +39,7 @@ class SideBarMenuProperties extends HtmlComponentProperties
    */
   public $sectionClass = '';
   /**
-   * @var Metadata
+   * @var \Matisse\Components\Metadata
    */
   public $sectionTemplate = type::content;
 }
