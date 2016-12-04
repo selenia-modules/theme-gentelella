@@ -19,7 +19,7 @@
       "email": "claudio.silva@impactwave.com"
     }
   ],
-  "homepage": "https://github.com/selenia-modules/theme-gentelella",
+  "homepage": "https://github.com/selenia-platform/theme-gentelella",
   "require": {
     "php": ">=5.6.0",
     "electro/installers": "^1.0.0",
