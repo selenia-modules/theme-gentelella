@@ -110,7 +110,7 @@ class SideBarMenu extends HtmlComponent
                       $link->title (),
                       when (isset($xi) && $sub, h ("span.$xi")),
                     ]),
-                    when ($sub, $this->renderMenuItem ($children, $xi, false /*$link->matches*/)),
+                    when ($sub, $this->renderMenuItem ($children, $xi, $active /*$link->matches*/)),
                   ]),
                 ];
               })->all()
@@ -126,7 +126,7 @@ class SideBarMenu extends HtmlComponent
     $links->rewind ();
     if (!$links->valid () || $depth >= $this->props->depth)
       return null;
-    return h ('ul.nav.collapse.' . $this->depthClass[$depth],
+    return h ('ul.nav.collapse.' . $this->depthClass[$depth],['style'=>($parentIsActive?'display:block':'')],
       map ($links, function (NavigationLinkInterface $link) use ($xi, $depth, $parentIsActive) {
         if (!$link->isActuallyVisible () ||
             ($link->isGroup () && $link->title () == '-' && $this->props->excludeDividers)
@@ -155,7 +155,7 @@ class SideBarMenu extends HtmlComponent
               $link->title (),
               when (isset($xi) && $sub, h ("span.$xi")),
             ]),
-            when ($sub, $this->renderMenuItem ($children, $xi, false /*$link->matches*/, $depth + 1)),
+            when ($sub, $this->renderMenuItem ($children, $xi, $active /*$link->matches*/, $depth + 1)),
           ]),
         ];
       })
