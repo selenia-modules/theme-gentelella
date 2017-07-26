@@ -7,6 +7,7 @@ use Electro\Kernel\Lib\ModuleInfo;
 use Matisse\Config\MatisseSettings;
 use Electro\Profiles\WebProfile;
 use Electro\ViewEngine\Config\ViewEngineSettings;
+use Selenia\Platform\Config\ThemeGentelellaPresets;
 use Selenia\Themes\Gentelella\Components\SideBarMenu;
 
 class ThemeGentelellaModule implements ModuleInterface
@@ -26,6 +27,7 @@ class ThemeGentelellaModule implements ModuleInterface
           ->registerComponents ([
             'SideBarMenu' => SideBarMenu::class,
           ])
+					->registerPresets([ThemeGentelellaPresets::class])
           // DO NOT IMPORT THE FOLLOWING NAMESPACE!
           ->registerControllersNamespace ($moduleInfo, \Selenia\Platform\Components::class, 'platform');
         $viewEngineSettings->registerViews ($moduleInfo);
