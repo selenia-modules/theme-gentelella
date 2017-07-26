@@ -7,7 +7,6 @@ use Electro\Kernel\Lib\ModuleInfo;
 use Matisse\Config\MatisseSettings;
 use Electro\Profiles\WebProfile;
 use Electro\ViewEngine\Config\ViewEngineSettings;
-use Selenia\Platform\Config\ThemeGentelellaPresets;
 use Selenia\Themes\Gentelella\Components\SideBarMenu;
 
 class ThemeGentelellaModule implements ModuleInterface

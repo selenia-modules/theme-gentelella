@@ -1,5 +1,5 @@
 <?php
-namespace Selenia\Platform\Config;
+namespace Selenia\Themes\Gentelella\Config;
 
 use Electro\Plugins\MatisseComponents\Checkbox;
 use Electro\Plugins\MatisseComponents\RadioButton;
