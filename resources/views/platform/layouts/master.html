@@ -1,4 +1,4 @@
-<Import services="app navigation"/>
+<Import services="app navigation session"/>
 
 <Content prependTo=head>
   <meta charset="UTF-8">
@@ -28,6 +28,7 @@
     <Include styles/>
   </head>
   <body {#bodyAttrs|*}>
+    <input type=hidden name="token" value="{session.token}">
     {#body|*}
     <Include scripts/>
     {#extraContent|*}
